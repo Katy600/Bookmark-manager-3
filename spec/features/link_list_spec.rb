@@ -5,7 +5,7 @@ feature 'so I can quickly go to websites I regularly visit' do
     visit('/links')
     expect(page.status_code).to eq(200)
     within 'ul#links' do
-      expect(page).to have_content('injection')
+      expect(page).to have_content('quick')
     end
   end
 end
