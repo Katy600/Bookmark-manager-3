@@ -12,13 +12,10 @@ id serial PRIMARY KEY,
 name varchar(55)
 );
 
-INSERT INTO students (name) VALUES (‘Jini’);
+Create : INSERT INTO students (name) VALUES (‘Jini’);
 
-DROP TABLE students;
+Read: SELECT * FROM students;
 
+Update: UPDATE students SET name = ‘Katy' WHERE name = ‘Jini’;
 
-SELECT * FROM students;
-
-UPDATE students SET name = ‘Katy' WHERE name = ‘Jini’;
-
-DELETE FROM students WHERE name = ‘Katy’;```
+Delete: DELETE FROM students WHERE name = ‘Katy’;```
