@@ -1,12 +1,11 @@
 require_relative 'data_mapper_setup'
 
 class Link
-include DataMapper::Resource
+  include DataMapper::Resource
 
-property :id, Serial
-property :title, String
-property :url, String
+  has n, :tag, through: Resource
 
-has n, :tag, through: Resource
-
+  property :id, Serial
+  property :title, String
+  property :url, String
 end
