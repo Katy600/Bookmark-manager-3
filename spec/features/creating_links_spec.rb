@@ -1,12 +1,14 @@
-feature 'so that I can save a website' do
-  scenario "add site's title and address to bookmark manager" do
-    visit('/links')
-    click_button("Add Link")
+require 'spec_helper'
+
+feature 'Create link' do
+  scenario "add link title and url" do
+    visit('/links/new')
     fill_in 'url', with: 'http://www.developermemes.com/'
     fill_in 'title', with: 'funny memes'
+    #fill_in 'tags', with: 'internet'
     click_button('Add')
-    within 'ul#links' do
+    #within 'links' do
       expect(page).to have_content('memes')
-    end
+    #end
   end
 end

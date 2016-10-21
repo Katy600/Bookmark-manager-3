@@ -1,6 +1,6 @@
 <h1> Links </h1>
-<form action="links/new" method = "GET">
-<input type= "submit" value="Add Link">
+<form action="/links/new" method="get">
+  <input type="submit" value='Add Link'>
 </form>
 
 <ul id='links'>
@@ -9,5 +9,5 @@
     Title: <%= link.title %>
     url: <%= link.url %>
   </li>
-  <% end %>
+    <% end %>
 </ul>
